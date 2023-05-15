@@ -39,10 +39,6 @@ public class WatchList extends Service {
         return WatchList;
     }
 
-
-
-
-
     @Nullable
     @Override
     // binder should return null as no data will be bound

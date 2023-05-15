@@ -2,33 +2,29 @@ package com.example.movieapp;
 
 import com.google.gson.annotations.SerializedName;
 
-public class MovieStruct {
+public class Movie {
 
     @SerializedName("id")
-    private int Id;
-
-    @SerializedName("overview")
-    private String overview;
+    private int id;
 
     @SerializedName("title")
     private String title;
 
+    @SerializedName("overview")
+    private String overview;
+
     @SerializedName("poster_path")
-    private String banner;
+    private String posterPath;
 
     @SerializedName("release_date")
     private String releaseDate;
 
-    public MovieStruct(String title) {
-        this.title = title;
-    }
-
     public int getId() {
-        return Id;
+        return id;
     }
 
     public void setId(int id) {
-        this.Id = id;
+        this.id = id;
     }
 
     public String getTitle() {
@@ -47,12 +43,12 @@ public class MovieStruct {
         this.overview = overview;
     }
 
-    public String getBanner() {
-        return banner;
+    public String getPosterPath() {
+        return posterPath;
     }
 
-    public void setBanner(String banner) {
-        this.banner = banner;
+    public void setPosterPath(String posterPath) {
+        this.posterPath = posterPath;
     }
 
     public String getReleaseDate() {
@@ -62,5 +58,13 @@ public class MovieStruct {
     public void setReleaseDate(String releaseDate) {
         this.releaseDate = releaseDate;
     }
+
+
+    //constructor to add the title
+    public Movie(String title) {
+        this.title = title;
+    }
+
+
 
 }
