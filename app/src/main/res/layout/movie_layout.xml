@@ -16,8 +16,8 @@
 
         <ImageView
             android:id="@+id/MovieBanner"
-            android:layout_width="80dp"
-            android:layout_height="120dp"
+            android:layout_width="180dp"
+            android:layout_height="match_parent"
             android:scaleType="centerCrop"
             android:src="@drawable/ic_launcher_background" />
 
@@ -33,29 +33,33 @@
                 android:id="@+id/MovieTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:text="Movie Title"
+                android:textAlignment="center"
                 android:textSize="18sp"
-                android:textStyle="bold"
-                android:text="Movie Title" />
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/MovieOverview"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="14sp"
-                android:text="Movie Overview" />
+                android:text="Movie Overview"
+                android:textAlignment="center"
+                android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/MovieRelease"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="14sp"
-                android:text="Release Date" />
+                android:text="Release Date"
+                android:textAlignment="center"
+                android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/MovieRating"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Rating" />
+                android:text="Rating"
+                android:textAlignment="center" />
 
         </LinearLayout>
 

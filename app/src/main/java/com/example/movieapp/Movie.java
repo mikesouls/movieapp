@@ -22,13 +22,13 @@ public class Movie {
     private String title;
 
     @SerializedName("vote_average")
-    private String rating;
+    private float rating;
 
-    public String getRating() {
+    public float getRating() {
         return rating;
     }
 
-    public void setRating(String rating) {
+    public void setRating(float rating) {
         this.rating = rating;
     }
     public int getId() {
