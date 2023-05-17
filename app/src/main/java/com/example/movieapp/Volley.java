@@ -7,20 +7,15 @@ import com.android.volley.RequestQueue;
 
 public class Volley {
 
-    private RequestQueue requestQueue;
     private static Volley instance;
-
+    private RequestQueue requestQueue;
     private static Context context;
 
-    // have volley queue the new request and get data back from it
-    public RequestQueue getRequestQueue() {
-        if (requestQueue == null) {
-            requestQueue = com.android.volley.toolbox.Volley.newRequestQueue(context.getApplicationContext());
-        }
-        return requestQueue;
+    private Volley(Context context) {
+        this.context = context;
+        requestQueue = getRequestQueue();
     }
 
-    // have the current instance set the data to the layouts
     public static synchronized Volley getInstance(Context context) {
         if (instance == null) {
             instance = new Volley(context);
@@ -28,11 +23,13 @@ public class Volley {
         return instance;
     }
 
-
-    private Volley(Context context) {
-        this.context = context;
-        requestQueue = getRequestQueue();
+    public RequestQueue getRequestQueue() {
+        if (requestQueue == null) {
+            requestQueue = com.android.volley.toolbox.Volley.newRequestQueue(context.getApplicationContext());
+        }
+        return requestQueue;
     }
+
     public <T> void addToRequestQueue(Request<T> req) {
         getRequestQueue().add(req);
     }

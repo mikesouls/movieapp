@@ -4,11 +4,10 @@ import com.google.gson.annotations.SerializedName;
 
 public class Movie {
 
+    // Constructor For Structuring the movies
+
     @SerializedName("id")
     private int id;
-
-    @SerializedName("title")
-    private String title;
 
     @SerializedName("overview")
     private String overview;
@@ -19,20 +18,25 @@ public class Movie {
     @SerializedName("release_date")
     private String releaseDate;
 
+    @SerializedName("title")
+    private String title;
+
+    @SerializedName("vote_average")
+    private String rating;
+
+    public String getRating() {
+        return rating;
+    }
+
+    public void setRating(String rating) {
+        this.rating = rating;
+    }
     public int getId() {
         return id;
     }
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
     }
 
     public String getOverview() {
@@ -43,14 +47,6 @@ public class Movie {
         this.overview = overview;
     }
 
-    public String getPosterPath() {
-        return posterPath;
-    }
-
-    public void setPosterPath(String posterPath) {
-        this.posterPath = posterPath;
-    }
-
     public String getReleaseDate() {
         return releaseDate;
     }
@@ -59,6 +55,22 @@ public class Movie {
         this.releaseDate = releaseDate;
     }
 
+    public String getBanner() {
+        return posterPath;
+    }
+
+    public void setBanner(String posterPath) {
+        this.posterPath = posterPath;
+    }
+
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
 
     //constructor to add the title
     public Movie(String title) {

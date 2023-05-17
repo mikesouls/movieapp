@@ -51,7 +51,11 @@
                 android:textSize="14sp"
                 android:text="Release Date" />
 
-
+            <TextView
+                android:id="@+id/MovieRating"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rating" />
 
         </LinearLayout>
 
